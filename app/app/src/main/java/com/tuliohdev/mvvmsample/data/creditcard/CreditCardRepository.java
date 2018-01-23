@@ -1,8 +1,11 @@
 package com.tuliohdev.mvvmsample.data.creditcard;
 
 import com.tuliohdev.mvvmsample.data.model.CreditCard;
-import io.reactivex.Single;
+import io.reactivex.Flowable;
+import io.reactivex.Maybe;
+import io.reactivex.Observable;
 import java.util.List;
+
 
 /**
  * Created by tulio on 16/01/2018.
@@ -10,6 +13,6 @@ import java.util.List;
 
 public interface CreditCardRepository {
 
-    Single<List<CreditCard>> getAllCreditCards();
+    Flowable<List<CreditCard>> getAllCreditCards();
 
 }

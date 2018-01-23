@@ -1,6 +1,8 @@
 package com.tuliohdev.mvvmsample.data.creditcard;
 
 import com.tuliohdev.mvvmsample.data.model.CreditCard;
+import io.reactivex.Maybe;
+import io.reactivex.Observable;
 import io.reactivex.Single;
 import java.util.List;
 import retrofit2.http.GET;
@@ -13,7 +15,6 @@ public interface CreditCardApiService {
 
     String PATH = "card";
 
-    @GET(PATH + "/getAll")
-    Single<List<CreditCard>> getAllCreditCards();
+    @GET(PATH + "/getAll") Maybe<List<CreditCard>> getAllCreditCards();
 
 }

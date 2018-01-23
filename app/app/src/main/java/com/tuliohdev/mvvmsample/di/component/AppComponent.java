@@ -40,12 +40,6 @@ public interface AppComponent extends AndroidInjector<DaggerApplication> {
         @BindsInstance
         Builder application(Application application);
 
-        @BindsInstance
-        Builder baseUrl(@Named("baseUrl") String baseUrl);
-
-        @BindsInstance
-        Builder databaseName(@Named("databaseName") String databaseName);
-
         AppComponent build();
     }
 }

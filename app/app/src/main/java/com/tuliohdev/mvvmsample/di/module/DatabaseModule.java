@@ -17,6 +17,12 @@ import javax.inject.Singleton;
 public class DatabaseModule {
 
     @Provides
+    @Named("databaseName")
+    String provideDatabaseName() {
+        return "mvvm-sample";
+    }
+
+    @Provides
     @Singleton
     AppDatabase providesAppDatabase(@ApplicationContext Context context, @Named("databaseName") String databaseName) {
         return Room.databaseBuilder(context, AppDatabase.class, databaseName).build();

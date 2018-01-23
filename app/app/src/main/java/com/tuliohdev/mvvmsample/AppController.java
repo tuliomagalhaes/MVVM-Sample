@@ -20,8 +20,6 @@ public class AppController extends DaggerApplication {
     protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
         AppComponent appComponent = DaggerAppComponent.builder()
             .application(this)
-            .baseUrl("http://192.168.0.17:8000/sample/v1")
-            .databaseName("mvvm-sample")
             .build();
         appComponent.inject(this);
         return appComponent;

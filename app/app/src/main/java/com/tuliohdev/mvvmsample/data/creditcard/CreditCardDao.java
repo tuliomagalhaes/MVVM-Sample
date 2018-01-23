@@ -4,6 +4,8 @@ import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 import com.tuliohdev.mvvmsample.data.model.CreditCard;
+import io.reactivex.Maybe;
+import io.reactivex.Observable;
 import io.reactivex.Single;
 import java.util.List;
 
@@ -14,9 +16,8 @@ import java.util.List;
 public interface CreditCardDao {
 
     @Insert
-    void insertCreditCardList(CreditCard... creditCards);
+    void insertCreditCardList(List<CreditCard> creditCards);
 
-    @Query("SELECT * FROM creditCard")
-    Single<List<CreditCard>> getAllCreditCards();
+    @Query("SELECT * FROM creditCard") Maybe<List<CreditCard>> getAllCreditCards();
 
 }

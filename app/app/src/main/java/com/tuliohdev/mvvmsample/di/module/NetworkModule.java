@@ -1,12 +1,10 @@
 package com.tuliohdev.mvvmsample.di.module;
 
 import android.app.Application;
-import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import dagger.Module;
 import dagger.Provides;
-import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
 import okhttp3.Cache;
@@ -21,12 +19,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module
 public class NetworkModule {
 
-    @Inject
+    @Provides
     @Named("baseUrl")
-    String mBaseUrl;
+    String provideBaseUrl() {
+        return "http://192.168.0.17:8000/sample/v1/";
+    }
 
     @Provides
-    @Singleton Cache provideHttpCache(Application application) {
+    @Singleton
+    Cache provideHttpCache(Application application) {
         int cacheSize = 10 * 1024 * 1024;
         Cache cache = new Cache(application.getCacheDir(), cacheSize);
         return cache;
@@ -47,11 +48,11 @@ public class NetworkModule {
     }
 
     @Provides
-    @Singleton Retrofit provideRetrofit(Gson gson, OkHttpClient okHttpClient) {
+    @Singleton Retrofit provideRetrofit(Gson gson, OkHttpClient okHttpClient, @Named("baseUrl") String baseUrl) {
         return new Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create(gson))
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .baseUrl(mBaseUrl)
+            .baseUrl(baseUrl)
             .client(okHttpClient)
             .build();
     }
