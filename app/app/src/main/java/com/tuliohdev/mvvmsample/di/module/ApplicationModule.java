@@ -1,8 +1,10 @@
 package com.tuliohdev.mvvmsample.di.module;
 
+import android.app.Application;
 import android.content.Context;
 import com.tuliohdev.mvvmsample.AppController;
 import com.tuliohdev.mvvmsample.di.ApplicationContext;
+import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
 
@@ -10,11 +12,9 @@ import dagger.Provides;
  * Created by tulio on 21/01/2018.
  */
 @Module
-public class ApplicationModule {
+public abstract class ApplicationModule {
 
-    @Provides
+    @Binds
     @ApplicationContext
-    Context provideContext(AppController appController) {
-        return appController;
-    }
+    abstract Context provideContext(Application appController);
 }

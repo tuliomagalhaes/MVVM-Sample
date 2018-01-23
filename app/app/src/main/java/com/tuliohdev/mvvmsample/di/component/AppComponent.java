@@ -22,7 +22,7 @@ import javax.inject.Singleton;
  */
 @Singleton
 @Component(modules = {
-    ApplicationMo   dule.class,
+    ApplicationModule.class,
     DatabaseModule.class,
     NetworkModule.class,
     ApiServiceModule.class,
@@ -31,10 +31,6 @@ import javax.inject.Singleton;
     AndroidSupportInjectionModule.class
 })
 public interface AppComponent extends AndroidInjector<DaggerApplication> {
-
-    void inject(AppController appController);
-
-    void inject(CreditCardRepositoryImpl creditCardRepository);
 
     @Override
     void inject(DaggerApplication daggerApplication);
