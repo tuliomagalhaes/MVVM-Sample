@@ -4,9 +4,7 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.arch.persistence.room.TypeConverters;
 import android.support.annotation.NonNull;
-import com.tuliohdev.mvvmsample.utils.typeconverters.BrandTypeConverter;
-import com.tuliohdev.mvvmsample.utils.typeconverters.ListTransactionTypeConverter;
-import java.util.List;
+import com.tuliohdev.mvvmsample.data.source.local.typeconverters.BrandTypeConverter;
 
 /**
  * Created by tulio on 20/01/2018.

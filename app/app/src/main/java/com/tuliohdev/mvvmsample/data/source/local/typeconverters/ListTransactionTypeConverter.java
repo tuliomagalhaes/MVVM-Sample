@@ -1,4 +1,4 @@
-package com.tuliohdev.mvvmsample.utils.typeconverters;
+package com.tuliohdev.mvvmsample.data.source.local.typeconverters;
 
 import android.arch.persistence.room.TypeConverter;
 import com.google.gson.Gson;
