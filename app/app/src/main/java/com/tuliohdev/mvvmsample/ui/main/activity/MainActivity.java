@@ -39,6 +39,8 @@ public class MainActivity extends DaggerAppCompatActivity {
             mProgressBar.setVisibility(View.GONE);
             mRvCreditCard.setAdapter(new CreditCardAdapter(creditCardPMS));
             mRvCreditCard.setLayoutManager(new LinearLayoutManager(this));
+        }, throwable -> {
+            System.out.println(throwable.getMessage());
         });
     }
 }
