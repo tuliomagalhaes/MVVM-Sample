@@ -49,11 +49,9 @@ public class CreditCardRepositoryImpl implements CreditCardRepository {
 
     @Override
     public Completable clearCache() {
-        return Completable
-            .create(emitter -> {
+        return Completable.create(emitter -> {
                 mCreditCardDao.deleteAllCreditCards();
                 emitter.onComplete();
-            })
-            .subscribeOn(Schedulers.io());
+            }).subscribeOn(Schedulers.io());
     }
 }

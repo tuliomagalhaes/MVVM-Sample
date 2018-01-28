@@ -3,8 +3,10 @@ package com.tuliohdev.mvvmsample.di.module;
 import android.app.Application;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.tuliohdev.mvvmsample.data.source.remote.RxJavaCallAdapterFactoryObserveOnMainThread;
 import dagger.Module;
 import dagger.Provides;
+import io.reactivex.schedulers.Schedulers;
 import javax.inject.Named;
 import javax.inject.Singleton;
 import okhttp3.Cache;
@@ -51,7 +53,8 @@ public class NetworkModule {
     @Singleton Retrofit provideRetrofit(Gson gson, OkHttpClient okHttpClient, @Named("baseUrl") String baseUrl) {
         return new Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create(gson))
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .addCallAdapterFactory(new RxJavaCallAdapterFactoryObserveOnMainThread())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io()))
             .baseUrl(baseUrl)
             .client(okHttpClient)
             .build();
