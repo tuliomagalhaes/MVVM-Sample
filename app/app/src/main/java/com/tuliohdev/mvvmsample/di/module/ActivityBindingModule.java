@@ -1,6 +1,6 @@
 package com.tuliohdev.mvvmsample.di.module;
 
-import com.tuliohdev.mvvmsample.ui.main.MainActivity;
+import com.tuliohdev.mvvmsample.ui.main.activity.MainActivity;
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 

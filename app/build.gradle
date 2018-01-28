@@ -30,11 +30,18 @@ ext {
     // dependencies
     androidSupportVersion = '27.0.2'
     constraintLayoutVersion = '1.0.2'
+    archComponentsVersion = '1.1.0'
+    roomVersion = '1.0.0'
+
     rxJavaVersion = '2.1.8'
     rxAndroidVersion = '2.0.1'
     retrofitVersion = '2.3.0'
-    roomVersion = '1.0.0'
     daggerVersion = '2.14.1'
-    jUnitVersion = '4.12'
     gsonVersion = '2.8.2'
+    butterknifeVersion = '8.8.1'
+
+    espressoVersion = '2.2.2'
+    jUnitVersion = '4.12'
+    assertJVersion = '2.9.0'
+    mockitoVersion = '1.10.19'
 }

@@ -22,7 +22,7 @@ public class NetworkModule {
     @Provides
     @Named("baseUrl")
     String provideBaseUrl() {
-        return "http://192.168.0.17:8000/sample/v1/";
+        return "http://192.168.1.4:8000/sample/v1/";
     }
 
     @Provides

@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import com.tuliohdev.mvvmsample.AppController;
 import com.tuliohdev.mvvmsample.di.ApplicationContext;
+import com.tuliohdev.mvvmsample.utils.ResourcesManager;
 import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
@@ -16,5 +17,12 @@ public abstract class ApplicationModule {
 
     @Binds
     @ApplicationContext
-    abstract Context provideContext(Application appController);
+    abstract Context bindContext(Application appController);
+
+    @Provides
+    static ResourcesManager provideResourceManager(Application appController) {
+        return new ResourcesManager(appController);
+    }
+
+
 }

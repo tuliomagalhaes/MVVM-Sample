@@ -1,8 +1,6 @@
 package com.tuliohdev.mvvmsample.di.component;
 
 import android.app.Application;
-import com.tuliohdev.mvvmsample.AppController;
-import com.tuliohdev.mvvmsample.data.creditcard.CreditCardRepositoryImpl;
 import com.tuliohdev.mvvmsample.di.module.ActivityBindingModule;
 import com.tuliohdev.mvvmsample.di.module.ApiServiceModule;
 import com.tuliohdev.mvvmsample.di.module.ApplicationModule;
@@ -14,7 +12,6 @@ import dagger.Component;
 import dagger.android.AndroidInjector;
 import dagger.android.DaggerApplication;
 import dagger.android.support.AndroidSupportInjectionModule;
-import javax.inject.Named;
 import javax.inject.Singleton;
 
 /**

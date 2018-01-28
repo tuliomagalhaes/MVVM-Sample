@@ -1,13 +1,12 @@
-package com.tuliohdev.mvvmsample.data.model;
+package com.tuliohdev.mvvmsample.data.model.repositorymodel;
 
-import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.TypeConverters;
 import com.tuliohdev.mvvmsample.utils.typeconverters.PurchaseTypeConverter;
 
 /**
  * Created by tulio on 20/01/2018.
  */
-public class Transaction {
+public class TransactionRM {
 
     public enum OperationType {
         CREDIT,

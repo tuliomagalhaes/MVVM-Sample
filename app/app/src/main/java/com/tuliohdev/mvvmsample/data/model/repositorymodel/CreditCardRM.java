@@ -1,4 +1,4 @@
-package com.tuliohdev.mvvmsample.data.model;
+package com.tuliohdev.mvvmsample.data.model.repositorymodel;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
@@ -12,7 +12,7 @@ import java.util.List;
  * Created by tulio on 20/01/2018.
  */
 @Entity
-public class CreditCard {
+public class CreditCardRM {
 
     public enum BrandType {
         MASTERCARD,
@@ -26,14 +26,13 @@ public class CreditCard {
     private BrandType brandType;
     private String expirationDate;
     private String cvv;
-    @TypeConverters({ ListTransactionTypeConverter.class})
-    private List<Transaction> transactions;
+    private String name;
 
-    public String getId() {
+    @NonNull public String getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(@NonNull String id) {
         this.id = id;
     }
 
@@ -69,11 +68,11 @@ public class CreditCard {
         this.cvv = cvv;
     }
 
-    public List<Transaction> getTransactions() {
-        return transactions;
+    public String getName() {
+        return name;
     }
 
-    public void setTransactions(List<Transaction> transactions) {
-        this.transactions = transactions;
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -17,12 +17,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    /*testOptions {
+        unitTests.returnDefaultValues = false
+    }*/
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile "com.android.support:appcompat-v7:$rootProject.ext.androidSupportVersion"
+    compile "com.android.support:recyclerview-v7:$rootProject.ext.androidSupportVersion"
+    compile "com.android.support:cardview-v7:$rootProject.ext.androidSupportVersion"
     compile "com.android.support.constraint:constraint-layout:$rootProject.ext.constraintLayoutVersion"
 
     compile "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxJavaVersion"
@@ -32,6 +40,8 @@ dependencies {
     compile "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
     compile "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.retrofitVersion"
 
+    compile "android.arch.lifecycle:extensions:$rootProject.ext.archComponentsVersion"
+    compile "android.arch.lifecycle:viewmodel:$rootProject.ext.archComponentsVersion"
     compile "android.arch.persistence.room:runtime:$rootProject.ext.roomVersion"
     compile "android.arch.persistence.room:rxjava2:$rootProject.ext.roomVersion"
     annotationProcessor "android.arch.persistence.room:compiler:$rootProject.ext.roomVersion"
@@ -44,10 +54,14 @@ dependencies {
 
     compile "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
 
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    compile "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
+
+    androidTestCompile("com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoVersion", {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
     testCompile "junit:junit:$rootProject.ext.jUnitVersion"
-    testCompile "android.arch.persistence.room:testing:$rootProject.ext.roomVersion"
+    testCompile "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
+    testCompile "org.assertj:assertj-core:$rootProject.ext.assertJVersion"
 }

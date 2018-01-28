@@ -1,6 +1,6 @@
 package com.tuliohdev.mvvmsample.di.module;
 
-import com.tuliohdev.mvvmsample.data.creditcard.CreditCardApiService;
+import com.tuliohdev.mvvmsample.data.source.remote.CreditCardApiService;
 import dagger.Module;
 import dagger.Provides;
 import retrofit2.Retrofit;

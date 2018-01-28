@@ -2,8 +2,8 @@ package com.tuliohdev.mvvmsample.di.module;
 
 import android.arch.persistence.room.Room;
 import android.content.Context;
-import com.tuliohdev.mvvmsample.data.AppDatabase;
-import com.tuliohdev.mvvmsample.data.creditcard.CreditCardDao;
+import com.tuliohdev.mvvmsample.data.source.local.AppDatabase;
+import com.tuliohdev.mvvmsample.data.source.local.CreditCardDao;
 import com.tuliohdev.mvvmsample.di.ApplicationContext;
 import dagger.Module;
 import dagger.Provides;

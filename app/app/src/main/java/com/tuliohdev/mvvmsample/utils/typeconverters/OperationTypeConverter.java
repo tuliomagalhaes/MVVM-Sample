@@ -1,7 +1,7 @@
 package com.tuliohdev.mvvmsample.utils.typeconverters;
 
 import android.arch.persistence.room.TypeConverter;
-import com.tuliohdev.mvvmsample.data.model.Transaction.OperationType;
+import com.tuliohdev.mvvmsample.data.model.repositorymodel.TransactionRM.OperationType;
 
 /**
  * Created by tulio on 21/01/2018.

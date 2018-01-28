@@ -1,9 +1,9 @@
 package com.tuliohdev.mvvmsample.di.module;
 
-import com.tuliohdev.mvvmsample.data.creditcard.CreditCardApiService;
-import com.tuliohdev.mvvmsample.data.creditcard.CreditCardDao;
-import com.tuliohdev.mvvmsample.data.creditcard.CreditCardRepository;
-import com.tuliohdev.mvvmsample.data.creditcard.CreditCardRepositoryImpl;
+import com.tuliohdev.mvvmsample.data.source.remote.CreditCardApiService;
+import com.tuliohdev.mvvmsample.data.source.local.CreditCardDao;
+import com.tuliohdev.mvvmsample.data.source.repository.creditcard.CreditCardRepository;
+import com.tuliohdev.mvvmsample.data.source.repository.creditcard.CreditCardRepositoryImpl;
 import dagger.Module;
 import dagger.Provides;
 
