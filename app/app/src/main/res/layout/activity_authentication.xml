@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+  <TextView
+      android:id="@+id/tvTitle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAlignment="center"
+      tools:text="Step 1"/>
+
+  <FrameLayout
+      android:id="@+id/main_content"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/tvTitle"
+      android:layout_above="@+id/btNextStep" />
+
+  <Button
+      android:id="@+id/btNextStep"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:text="@string/next_step" />
+
+</RelativeLayout>

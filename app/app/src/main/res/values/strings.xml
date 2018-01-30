@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">MVVMSample</string>
     <string name="try_again">Try again</string>
+  <string name="next_step">Next Step</string>
+  <string name="basic_data">Basic Data</string>
+  <string name="address_data">Address Data</string>
+  <string name="successful_registered">Successful Registered!</string>
+  <string name="full_name">Full Name</string>
+  <string name="email">Email</string>
+  <string name="base_salary">Base Salary</string>
 </resources>

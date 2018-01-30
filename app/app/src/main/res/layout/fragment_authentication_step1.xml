@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+  <EditText
+      android:id="@+id/etFullName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:inputType="textPersonName"
+      android:hint="@string/full_name"/>
+
+  <EditText
+      android:id="@+id/etEmail"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:inputType="textEmailAddress"
+      android:hint="@string/email"/>
+
+  <EditText
+      android:id="@+id/etSalary"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:inputType="textPersonName"
+      android:hint="@string/base_salary"/>
+
+  <CheckBox
+      android:id="@+id/cbHasAddress"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Has address?" />
+
+</LinearLayout>
